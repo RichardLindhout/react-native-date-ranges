@@ -5,7 +5,7 @@ import moment from "moment";
 import "moment-range";
 import { dates } from "./dates";
 import normalize from "./normalizeText";
-
+moment.lang("nl");
 const styles = {
   week: {
     flexDirection: "row",

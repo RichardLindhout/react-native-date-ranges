@@ -2,9 +2,10 @@ import React, { Component } from "react";
 import { View, Text } from "react-native";
 import PropTypes from "prop-types";
 import moment from "moment";
+
 import "moment-range";
 import Week from "./Week";
-
+moment.lang("nl");
 const styles = {
   week: {
     flexDirection: "row",
