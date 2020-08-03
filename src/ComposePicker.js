@@ -151,25 +151,25 @@ export default class ComposePicker extends Component {
     style = { ...style, ...this.props.style };
 
     return (
-      <>
-      <DateRange
-        headFormat={this.props.headFormat}
-        customStyles={customStyles}
-        markText={this.props.markText}
-        onDatesChange={this.onDatesChange}
-        isDateBlocked={this.isDateBlocked}
-        startDate={this.state.startDate}
-        endDate={this.state.endDate}
-        focusedInput={this.state.focus}
-        selectedBgColor={this.props.selectedBgColor || undefined}
-        selectedTextColor={this.props.selectedTextColor || undefined}
-        mode={this.props.mode || "single"}
-        currentDate={this.state.currentDate}
-        textStartDate={this.state.textStartDate}
-        textEndDate={this.state.textEndDate}
-      />   
-      {this.renderButton()}
-      <>
+      <View style={{ flex: 1 }}>
+        <DateRange
+          headFormat={this.props.headFormat}
+          customStyles={customStyles}
+          markText={this.props.markText}
+          onDatesChange={this.onDatesChange}
+          isDateBlocked={this.isDateBlocked}
+          startDate={this.state.startDate}
+          endDate={this.state.endDate}
+          focusedInput={this.state.focus}
+          selectedBgColor={this.props.selectedBgColor || undefined}
+          selectedTextColor={this.props.selectedTextColor || undefined}
+          mode={this.props.mode || "single"}
+          currentDate={this.state.currentDate}
+          textStartDate={this.state.textStartDate}
+          textEndDate={this.state.textEndDate}
+        />
+        {this.renderButton()}
+      </View>
     );
   }
 }
