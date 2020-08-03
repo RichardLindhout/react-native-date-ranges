@@ -21,8 +21,8 @@ const styles = {
     paddingRight: 10,
   },
   headCoverContainer: {
-    paddingTop: 20,
-    paddingBottom: 20,
+    paddingTop: 0,
+    paddingBottom: 50,
     width: "100%",
     justifyContent: "center",
     paddingHorizontal: 20,

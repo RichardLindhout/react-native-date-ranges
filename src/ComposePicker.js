@@ -151,6 +151,7 @@ export default class ComposePicker extends Component {
     style = { ...style, ...this.props.style };
 
     return (
+      <>
       <DateRange
         headFormat={this.props.headFormat}
         customStyles={customStyles}
@@ -166,7 +167,9 @@ export default class ComposePicker extends Component {
         currentDate={this.state.currentDate}
         textStartDate={this.state.textStartDate}
         textEndDate={this.state.textEndDate}
-      />
+      />   
+      {this.renderButton()}
+      <>
     );
   }
 }
