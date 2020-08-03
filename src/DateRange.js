@@ -5,7 +5,7 @@ import moment from "moment";
 import normalize from "./normalizeText";
 import Month from "./Month";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
-moment.lang("nl");
+moment.locale("nl");
 const styles = {
   calendar: {
     backgroundColor: "rgb(255, 255, 255)",

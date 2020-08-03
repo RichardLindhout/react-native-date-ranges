@@ -5,7 +5,7 @@ import moment from "moment";
 
 import "moment-range";
 import Week from "./Week";
-moment.lang("nl");
+moment.locale("nl");
 const styles = {
   week: {
     flexDirection: "row",
