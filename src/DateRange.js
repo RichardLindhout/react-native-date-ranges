@@ -58,8 +58,7 @@ export default class DateRange extends Component {
       startDate: props.startDate || "",
       endDate: props.endDate || "",
       focus: props.focusedInput || "startDate",
-      clearStart: "",
-      clearEnd: "",
+
       clearSingle: props.currentDate.format(defalutFormat) || "",
       selectState: "monthAndDate", // or year
       selectedYear: null,
@@ -92,17 +91,6 @@ export default class DateRange extends Component {
     }
     this.setState({ ...this.state, focus: focusedInput }, () => {
       this.setState({ ...this.state, startDate, endDate });
-      if (endDate) {
-        this.setState({
-          clearStart: startDate.format(headFormat),
-          clearEnd: endDate.format(headFormat),
-        });
-      } else {
-        this.setState({
-          clearStart: startDate.format(headFormat),
-          clearEnd: "",
-        });
-      }
     });
   };
   selectYear = () => {
@@ -172,14 +160,14 @@ export default class DateRange extends Component {
             <View>
               <View style={styles.dateContainer}>
                 <Text style={headerDate}>
-                  {this.state.clearStart
-                    ? this.state.clearStart
+                  {this.state.startDate
+                    ? this.state.startDate.format(headFormat)
                     : this.state.textStartDate}
                 </Text>
                 <Text style={styles.headTitleText} />
                 <Text style={headerDate}>
-                  {this.state.clearEnd
-                    ? this.state.clearEnd
+                  {this.state.endDate
+                    ? this.state.endDate.format(headFormat)
                     : this.state.textEndDate}
                 </Text>
               </View>
