@@ -151,7 +151,7 @@ export default class ComposePicker extends Component {
     style = { ...style, ...this.props.style };
 
     return (
-      <View style={{ flex: 1 }}>
+      <View>
         <DateRange
           headFormat={this.props.headFormat}
           customStyles={customStyles}
