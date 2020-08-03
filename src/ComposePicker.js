@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import DateRange from "./DateRange";
 import moment from "moment";
 import normalize from "./normalizeText";
-moment.locale("nl");
+
 const styles = {
   placeholderText: {
     color: "#c9c9c9",
