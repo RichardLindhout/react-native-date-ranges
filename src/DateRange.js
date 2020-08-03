@@ -33,7 +33,6 @@ const styles = {
   },
   headTitleText: {
     fontSize: normalize(20),
-    color: "white",
     fontWeight: "bold",
   },
   headerDateSingle: {
