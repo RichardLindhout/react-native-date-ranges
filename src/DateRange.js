@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import moment from "moment";
 import normalize from "./normalizeText";
 import Month from "./Month";
+import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 
 const styles = {
   calendar: {
@@ -200,7 +201,7 @@ export default class DateRange extends Component {
                     fontWeight: "bold",
                   }}
                 >
-                  {"<"}
+                  <Icon name="chevron-left" size={24} />
                 </Text>
               </TouchableOpacity>
               <Text
@@ -216,7 +217,7 @@ export default class DateRange extends Component {
                     fontWeight: "bold",
                   }}
                 >
-                  {">"}
+                  <Icon name="chevron-right" size={24} />
                 </Text>
               </TouchableOpacity>
             </View>
