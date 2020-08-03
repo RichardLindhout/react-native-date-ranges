@@ -23,10 +23,8 @@ const styles = {
   headCoverContainer: {
     paddingTop: 20,
     paddingBottom: 20,
-    height: normalize(120),
     width: "100%",
     justifyContent: "center",
-    backgroundColor: "#F5A623",
     paddingHorizontal: 20,
   },
   dateContainer: {
@@ -173,7 +171,6 @@ export default class DateRange extends Component {
           )}
           {this.props.mode === "range" && (
             <View>
-              <Text style={markTitle}>{markText}</Text>
               <View style={styles.dateContainer}>
                 <Text style={headerDate}>
                   {this.state.clearStart
