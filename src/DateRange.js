@@ -82,11 +82,10 @@ export default class DateRange extends Component {
       !this.props.mode || this.props.mode === "single"
         ? "ddd, MMM D"
         : "MMM DD,YYYY";
-    const headFormat = this.props.headFormat || defalutFormat;
+
     const { startDate, endDate, focusedInput, currentDate } = event;
     if (currentDate) {
       this.setState({ currentDate });
-      this.setState({ clearSingle: currentDate.format(headFormat) });
       return;
     }
     this.setState({ ...this.state, focus: focusedInput }, () => {
@@ -114,8 +113,6 @@ export default class DateRange extends Component {
       !this.props.mode || this.props.mode === "single"
         ? "ddd, MMM D"
         : "MMM DD,YYYY";
-    const headFormat = this.props.headFormat || defalutFormat;
-    this.setState({ clearSingle: this.state.currentDate.format(headFormat) });
   };
   render() {
     const markText = this.props.markText || "選擇日期";
@@ -125,6 +122,7 @@ export default class DateRange extends Component {
       ...styles.headCoverContainer,
       ...customStyles.headerStyle,
     };
+    const headFormat = this.props.headFormat || defalutFormat;
     const markTitle = {
       ...styles.headTitleText,
       color: "black",
@@ -152,7 +150,11 @@ export default class DateRange extends Component {
                 </Text>
               </TouchableOpacity>
               <TouchableOpacity onPress={this.selectMonthAndDate}>
-                <Text style={headerDateSingle}>{this.state.clearSingle}</Text>
+                <Text style={headerDateSingle}>
+                  {this.state.currentDate
+                    ? this.state.currentDate.format(headFormat)
+                    : null}
+                </Text>
               </TouchableOpacity>
             </View>
           )}
